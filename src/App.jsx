@@ -13,18 +13,17 @@ function App() {
 
     fetch('http://localhost:5000/users', {
       method:'POST',
-      header:{
+      headers:{
         'content-type': 'application/json'
       },
-      body:JSON.stringify(user)
+      body: JSON.stringify(user)
     })
-    
+
     .then(res => res.json())
     .then(data => {
       console.log(data);
     })
   }
-  
 
   return (
     <>
